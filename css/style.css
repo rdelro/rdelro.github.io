@@ -363,3 +363,26 @@
     font-size:1.0em !important;
   }
 }
+
+@media (max-height:650px) {
+  .sidebar .img {
+      height:50px !important;
+      width:50px !important;
+  }
+
+  .sidebar .sub {
+    height:5px !important;
+    line-height:5px !important;
+    font-size:1.0em !important;
+  }
+
+  .sidebar .pages {
+    margin-top:25px;
+  }
+
+  .sidebar .pages ul {
+    height:40px;
+    line-height:40px;
+    font-size:1.0em;
+  }
+}
