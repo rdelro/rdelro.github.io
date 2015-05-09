@@ -1,0 +1,189 @@
+/**
+ * Stylesheet by Jared Allard <http://jaredallard.me>
+ *
+ * Licensed under the MIT license.
+ **/
+
+ /* boostrap or not, we need this. */
+ body, html {
+   width:100%;
+   height:100%;
+   background-color:#ECF0F1;
+   overflow:hidden;
+ }
+
+/* left side bar, for intro */
+ .sidebar {
+   margin:0;
+   padding:0;
+
+   height:100%;
+   width:400px;
+
+   /* float it */
+   float:left;
+
+   /* visualiziation, remove */
+   background-color: #16A085;
+   color: #16A085;
+
+   z-index:2;
+ }
+
+ .sidebar .img {
+   position: relative;
+   height:140px;
+   width:140px;
+
+   margin:auto; /* center */
+   margin-top:50px;
+
+   /* tmp background color */
+   background: url("../img/me.jpg");
+
+   /* background-color:white; */
+   background-size: contain;
+
+   /* for roundin-g the div to look like a circle */
+   border-radius: 50%;
+ }
+
+ .sidebar .header {
+   color:#FFFFFF;
+   font-size:2.6em;
+
+   font-family: "Lato", sans-serif;
+
+   margin-top:30px;
+
+   text-align:center;
+ }
+
+ .sidebar .sub {
+   color:#FFFFFF;
+   font-size:1.2em;
+   font-family: "Lato", sans-serif;
+   font-style:italic;
+
+   margin-top:10px;
+
+   text-align:center;
+ }
+
+ .sidebar .pages {
+   width:100%;
+   margin-top:50px;
+ }
+
+ .sidebar .pages ul {
+   /* resets */
+   padding:0;
+   margin:0;
+
+
+   height:100px;
+   line-height:100px;
+   vertical-align:center;
+   text-align:center;
+
+   font-size:1.5em;
+   color:#ffffff;
+   font-family: 'Lato', sans-serif;
+ }
+
+ .sidebar .pages .selected {
+   background-color:#FFFFFF;
+   color:inherit;
+ }
+
+/* intro, on right */
+
+.intro .bg {
+  height:300px;
+  width:100%;
+
+  z-index:-2;
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.intro {
+  height:100%;
+  overflow-y:scroll;
+}
+
+.intro .overlay {
+  height:300px;
+  width:100%;
+
+  margin-top:-300px;
+
+  z-index:-1;
+  background: url("../img/overlay2.png"), url("../img/overlay3.svg");
+  background-color: rgba(0,0,0, 0.15)
+}
+
+.intro .tab {
+  position:relative;
+  top:-50px;
+
+  background-color:#FFFFFF;
+  color:#34495E;
+  font-size:1.5em;
+
+  height:50px;
+  line-height:50px;
+  width:200px;
+
+  /* align text */
+  vertical-align:center;
+  text-align:center;
+
+  margin:auto;
+  margin-bottom:0;
+  margin-top:0;
+}
+
+.intro .header {
+  height:auto;
+  margin:0;
+  padding:0;
+}
+
+.intro .header h1 {
+  margin:0;
+  padding:0;
+
+  vertical-align:middle;
+  text-align:center;
+}
+
+.about {
+  padding-top:75px;
+}
+
+/* page */
+.intro .start .page p {
+  padding-right:50px;
+  padding-left:50px;
+
+  color:#95A5A6;
+}
+
+.intro .start {
+  margin:0;
+  margin-top: -50px;
+  padding:0;
+  height:1000px;
+  background-color:#FFFFFF;
+}
+
+/* gotta love CSS OOP like */
+.intro .start .header {
+  color:#7F8C8D;
+  margin-top:-50px;
+  text-align:center;
+  font-size:2em;
+}
