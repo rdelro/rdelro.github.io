@@ -146,19 +146,6 @@
   margin-top:0;
 }
 
-.intro .header {
-  height:auto;
-  margin:0;
-  padding:0;
-}
-
-.intro .header h1 {
-  margin:0;
-  padding:0;
-
-  vertical-align:middle;
-  text-align:center;
-}
 
 .about {
   padding-top:75px;
@@ -168,6 +155,7 @@
 .intro .start .page p {
   padding-right:50px;
   padding-left:50px;
+  padding-bottom:50px;
 
   color:#95A5A6;
 }
@@ -176,8 +164,14 @@
   margin:0;
   margin-top: -50px;
   padding:0;
-  height:1000px;
+  height:auto;
   background-color:#FFFFFF;
+}
+
+.intro .start hr {
+  margin-right:50px;
+  margin-left:50px;
+  padding-bottom:50px;
 }
 
 /* gotta love CSS OOP like */
@@ -186,4 +180,135 @@
   margin-top:-50px;
   text-align:center;
   font-size:2em;
+}
+
+.intro .start .page h1 {
+  height:auto;
+  margin:0;
+  padding:0;
+
+  padding-bottom:50px;
+
+  color:#7F8C8D;
+
+  vertical-align:middle;
+  text-align:center;
+}
+
+
+/* footer */
+.footer {
+  height:auto;
+
+  padding-bottom:50px;
+}
+
+.footer .copyright {
+  padding-top:50px;
+  color:#767676;
+
+  text-align:center;
+
+  font-family: 'Lato', sans-serif;
+  font-size:1em;
+}
+
+.footer .copyright a {
+  color:#18BC9C;
+}
+
+
+/* mobile support */
+
+.menu {
+  position:fixed;
+  top:0;
+
+  height:50px;
+  width:100%;
+  z-index:10;
+
+  background-color:#2C3E50;
+}
+
+.menu .action-wrapper {
+  position:relative;
+
+  background-color:#16A085;
+
+  float:left;
+
+  width:50px;
+  height:50px;
+}
+
+.menu .action-btn {
+  height:50px;
+  line-height:50px;
+  width:50px;
+
+  color:#FFFFFF;
+  font-size:2em;
+
+  text-align:center;
+  vertical-align:center;
+}
+
+
+/* mobile medias */
+@media (max-width:800px) {
+  .sidebar {
+    position:fixed;
+    display:none;
+    width:200px;
+  }
+
+  .sidebar .img {
+    margin-top:100px;
+  }
+
+  .sidebar .header {
+    font-size:1.9em;
+  }
+
+  .sidebar .sub {
+    font-size:1.3em;
+  }
+
+  .sidebar .pages ul {
+    height:50px;
+    line-height:50px;
+
+    font-size:1.2em;
+  }
+
+  .intro .start h1 {
+    font-size:1.8em;
+  }
+
+  .intro .start hr {
+    margin-left:25px;
+    margin-right:25px;
+  }
+
+  .intro .start .page p {
+    padding-right:25px;
+    padding-left:25px;
+  }
+}
+
+@media (min-width:800px) and (max-width:1200px) {
+  .menu {
+    display:none;
+  }
+
+  .sidebar {
+    width:300px;
+  }
+}
+
+@media (min-width:1200px) {
+  .menu {
+    display:none;
+  }
 }

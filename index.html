@@ -28,6 +28,15 @@
     <![endif]-->
   </head>
   <body>
+    <!-- mobile only menu -->
+    <div class="menu">
+      <div class='action-wrapper'>
+        <div class='action-btn' onclick='showSide()'>
+          <i class='fa fa-bars'></i>
+        </div>
+      </div>
+    </div>
+
     <!-- sidebar -->
     <div class='sidebar'>
       <div class='img'></div>
@@ -52,14 +61,25 @@
       <div class='start'>
         <br /> <!-- fixes weired margin and padding issues -->
         <div class='page about' page='about'>
-          <h1 class='header'>An entertainer looking to change the world</h1>
+          <h1 style='margin-top:-50px;'>An entertainer looking to change the world</h1>
+          <p>
+            Really important stuff about me.
+          </p>
         </div>
+
+        <hr />
 
         <div class='page' page='projects'>
-
+          <h1>Projects</h1>
+          <p>
+            projects
+          </p>
         </div>
 
+        <hr />
+
         <div class='page' page='contact'>
+          <h1>Contact Me</h1>
           <p>
             Looking to contact me?
           </p>
@@ -67,7 +87,9 @@
 
         <!-- Footer -->
         <div class='footer'>
-
+          <div class='copyright'>
+            &copy; 2015 Roman Delgado.&nbsp;&nbsp;/&nbsp;&nbsp;Created by <a href="http://jaredallard.me">Jared Allard</a>.
+          </div>
         </div>
       </div>
     </div>
@@ -79,6 +101,42 @@
     <script src="js/jquery.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+
+    <!-- quick and dirty page switching framework -->
+    <script type="text/javascript">
+      window.showed = false;
+
+      $(".pages ul").click(function() {
+        var pageFor = $(this).attr("for");
+
+        /* select new btn and highlight */
+        $(".pages ul").removeClass("selected");
+        $(this).addClass("selected");
+
+        console.log("scrolling to: "+pageFor)
+
+        // $(".intro").animate({ scrollTop: $("div[page="+pageFor+"]").position().top }, 1000);
+
+        if(window.showed) {
+          $(".sidebar").hide();
+        }
+
+        $(".intro").scrollTop(0);
+        if (pageFor !== "about") {
+          $(".intro").scrollTop($("div[page="+pageFor+"]").offset().top);
+        }
+      })
+
+      function showSide() {
+        if(window.showed === false) {
+          window.showed=true;
+          $(".sidebar").show()
+        } else {
+          window.showed=false;
+          $(".sidebar").hide()
+        }
+      }
+    </script>
   </body>
 </html>
