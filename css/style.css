@@ -297,6 +297,20 @@
   }
 }
 
+/* height issues */
+@media (max-height:600px) {
+  .sidebar .img {
+      height:100px;
+      width:100px;
+  }
+
+  .sidebar .sub {
+    height:15px;
+    line-height:15px;
+    font-size:1.0em;
+  }
+}
+
 @media (min-width:800px) and (max-width:1200px) {
   .menu {
     display:none;
