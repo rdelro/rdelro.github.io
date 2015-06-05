@@ -255,11 +255,13 @@
   text-align:center;
 }
 
-.icons i:hover {
+.icons i:hover,
+.icons img:hover {
   color:#16A085;
 }
 
-.icons i {
+.icons i,
+.icons img{
   width:50px;
   height:50px;
   color:#18BC9C;
